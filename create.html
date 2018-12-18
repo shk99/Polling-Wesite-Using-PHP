@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Create POll</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jq.js"></script>
+        <script>
+            $(document).ready(function(e)
+            {
+                var html='<div><input type="text" name="c[]" id="c" required> <a href="#" id="remove">X</a></div>';
+                
+                $("#add").click(function(e)
+                {
+                    $("#container").append(html);
+                });
+
+                $("#container").on('click','#remove',function(e)
+                {
+                    $(this).parent('div').remove();
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="header"><h1>Create your own poll</h1></div>
+            <form class="myform" action="create.php" method="post">
+                <div class="form-group"><h2>Enter your question here</h2></div>
+                <div class="form-group"><textarea name="question" cols="30" rows="10" required></textarea></div>
+                <div class="form-group"><h2>Enter your choices here</h2></div>
+                <div class="form-group">
+                    <input type="text" name="ch1" required>
+                    <div id="container"><input type="text" name="c[]" id="c" required></div>
+                </div>
+                <div class="form-group"><a class="button" href="#" id="add">Add More Choices</a></div>
+                <div class="form-group"><button class="button" type="submit" name="create">Create</button></div>
+            </form>
+            <a class="button" href='dashboard.php'>Go Back</a>
+        </div>
+
+            
+    </body>
+</html>
