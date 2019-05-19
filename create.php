@@ -26,10 +26,10 @@
 
 ?>
 <html>
-<head>
-<title>Create</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-</body>
+    <head>
+        <title>Create</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    </body>
 </html>
